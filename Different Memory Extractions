@@ -1,0 +1,16 @@
+### Windows Memory Extracting
+The method of extraction for memory differs depending on the OS we are analyzing. For Windows, there are two tools that are commonly used in the industry: FTK and WinPmem. That is not to say that these are the only two superior or used tools during an investigation. Tool selection is largely a matter of preference. Other notable tools include MAGNET RAM, Velociraptor, and F-Response.
+
+FTK and WinPmem are both great tools that have their own use case. FTK is a forensics suite used to extract data from disk images, but it also includes the ability to create memory images. WinPmem is a lightweight and portable open-source memory acquisition tool, so copying the executable to the victim host is relatively easy.
+
+Once you've extracted a memory image from a Windows system, irrespective of the tool used, you will then load that memory image into an analysis tool. While there are many commercial forensics tools that support memory analysis, the most popular option in an open source tool called Volatility. More on that in a moment.
+
+---
+
+### Linux Memory Extracting
+Unfortunately, extracting memory on Linux can be a fair bit more complicated than on Windows, and you may need to go through a few additional steps before obtaining your memory image. First, there's the matter of the memory profile.
+
+In the context of memory forensics, a "profile" refers to a set of rules and data structures that define the format of a specific operating system's memory. For instance, the architecture for an OS dump with specifications like 10x64 Build:10.0.15063.0 differs significantly from from that of 10.0.10586.306. In order for analysis tools like Volatility to parse a memory image accurately, the target profile for the source system must already be in Volatility's database. Otherwise, you will need to rebuild the memory profile, which consists of creating a new memory profile or modifying an existing one to correctly interpret and analyze the contents of the memory image. This can be very tedious. While this same issue can arise for Windows memory images, it is more common for Linux due to the diversity of distributions, kernels, and unique customizations available.
+
+For the purposes of this lab, we will focus on extracting memory from Windows.
+
