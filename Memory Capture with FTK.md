@@ -1,0 +1,52 @@
+### Memory Capture with FTK Imager
+
+---
+
+#### Step 1
+  * Create a `file` where the contents will be stored.
+  * From the `FTK Imager` menu bar, click `File` and select `Capture Memory`.
+
+Should look like this:
+
+![image](https://github.com/TariqX-io/Memory.Forensics.Vol/assets/105884880/6e88bd28-905c-445e-b797-b99105edd9df)
+
+---
+
+#### Step 2
+  * In the `Memory Capture` window, click the `Browse` button next to the `Destination` path field.
+
+#### Step 3
+  * In the `Browse` for `Folder` window, select your newly created folder and click OK.
+
+#### Step 4
+  * In the `Memory Capture` window, click the Browse button next to the `Destination` path field.
+
+#### Step 5
+  * In the Browse for Folder window, select your newly created `folder` and click `OK`.
+
+#### Step 6
+  * In the Memory Capture window, in the Destination Filename field, rename the file to FTKmemdump.mem, then click Capture Memory to start the capture process.
+
+---
+
+![image](https://github.com/TariqX-io/Memory.Forensics.Vol/assets/105884880/43c522b4-b037-457a-b783-36df82505931)
+
+---
+
+_Process may take a few minutes to complete._
+
+#### Step 7
+  * When the memory capture is complete, click `Close` to close the Memory Progress dialog box, then close the `FTK Imager window`.
+
+#### Step 8
+  * Open the `folder` you saved the `MEM dump` too. This file should be a `.MEM` file.
+
+
+
+
+
+
+
+
+
+
